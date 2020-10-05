@@ -34,7 +34,8 @@ from .views import authentication_views, \
 	requirement_item_views, \
 	requirement_views, \
 	search_views, \
-	task_views
+	task_views, \
+	temp_views
 
 
 urlpatterns = [
@@ -128,6 +129,9 @@ urlpatterns = [
 	# Tasks
 	path('task_information/<int:task_id>/',task_views.task_information,name='task_information'),
 	path('task_information/<int:task_id>/save/',task_views.task_information_save,name='task_information_save'),
+
+	# EXTRA TEMP CODE
+	path('tinymce/',temp_views.tinymce,name='tinymce'),
 ]
 
 """
